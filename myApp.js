@@ -73,7 +73,10 @@ app.get("/name", function(req,res){
 
 
 /** 12) Get data form POST  */
-
+app.post("/name", function(req, res){
+    var string = req.body.first + " " + req.body.last;
+    res.json({ name: string });
+});
 
 
 // This would be part of the basic setup of an Express app
